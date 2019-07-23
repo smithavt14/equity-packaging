@@ -1,0 +1,141 @@
+@import "colors";
+@import "fonts";
+
+// Container Top
+.header .container-top {
+	width: 100vw;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 100px;
+	box-sizing: border-box;
+	border-bottom: 2px solid $light-blue;
+	font-family: UEFA Supercup Regular;
+	font-size: 14px;
+}
+
+.header .container-top .box {
+	display: flex;
+	color: $gray;
+}
+
+.header .container-top .box a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.header .container-top .box .contact-container {
+	display: flex;
+	align-items: center;
+}
+
+.header .container-top .box .divider {
+	margin: 0 10px;
+	color: $light-gray;
+}
+
+.header .container-top .box .language-container {
+	display: flex;
+	align-items: center;
+}
+
+.header .container-top .box .language-container .icon {
+	background: url('/assets/icons/gray-arrow.png');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 8px;
+	width: 6px;
+	margin: 0 10px;
+}
+
+.header .container-top .box .contact-container .icon {
+	background: url('/assets/icons/gray-arrow.png');
+	transform: rotate(-90deg);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 8px;
+	width: 6px;
+	margin-right: 10px;
+}
+
+.header .container-top .box .social-icon {
+	margin: 0 10px;
+	height: 18px;
+	width: 18px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.header .container-top .facebook {
+	background: url('/assets/icons/facebook-f-brands.svg');
+}
+
+.header .container-top .twitter {
+	background: url('/assets/icons/twitter-brands.svg');
+}
+
+.header .container-top .linkedin {
+	background: url('/assets/icons/linkedin-in-brands.svg');
+}
+
+// Container Bottom
+.header .container-bottom {
+	width: 100vw;
+	height: 85px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 100px;
+	box-sizing: border-box;
+	position: relative;
+	&:before {
+		content: "";
+		width: 60%;
+		height: 100%;
+		background: $light-blue;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -10;
+	}
+	&:after {
+		content: "";
+		width: 0;
+	    height: 0;
+	    border-bottom: 10px solid red;
+	    border-left: 100px solid transparent;
+	    border-right: 100px solid transparent;
+
+	}
+}
+
+.header .container-bottom .box {
+	display: flex;
+	color: $gray;
+}
+
+.header .container-bottom .box .logo {
+	background: url('/assets/images/ep-logo.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 290px;
+}
+
+.header .container-bottom .box .navigation {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header .container-bottom .box .navigation a {
+	color: $off-black;
+	font-family: UEFA Supercup Bold;
+	font-size: 16px;
+	text-decoration: none;
+	margin: 0 25px;
+}
