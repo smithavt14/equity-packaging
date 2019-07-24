@@ -18,6 +18,7 @@
 .header .container-top .box {
 	display: flex;
 	color: $gray;
+	position: relative;
 }
 
 .header .container-top .box a {
@@ -28,6 +29,9 @@
 .header .container-top .box .contact-container {
 	display: flex;
 	align-items: center;
+	&:hover > .icon {
+		left: -10px;
+	}
 }
 
 .header .container-top .box .divider {
@@ -41,7 +45,7 @@
 }
 
 .header .container-top .box .language-container .icon {
-	background: url('/assets/icons/gray-arrow.png');
+	background: url('/assets/icons/arrow-gray.png');
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -51,14 +55,16 @@
 }
 
 .header .container-top .box .contact-container .icon {
-	background: url('/assets/icons/gray-arrow.png');
+	background: url('/assets/icons/arrow-gray.png');
 	transform: rotate(-90deg);
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 8px;
 	width: 6px;
-	margin-right: 10px;
+	position: absolute;
+	left: -15px;
+	transition: .25s ease-in-out;
 }
 
 .header .container-top .box .social-icon {
@@ -82,7 +88,7 @@
 	background: url('/assets/icons/linkedin-in-brands.svg');
 }
 
-// Container Bottom
+// ----- Container Bottom Styles -----
 .header .container-bottom {
 	width: 100vw;
 	height: 85px;
@@ -92,24 +98,25 @@
 	padding: 0 100px;
 	box-sizing: border-box;
 	position: relative;
+}
+
+.header .container-bottom .box .highlight {
+	width: 55%;
+	height: 100%;
+	background: $light-blue;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -10;
 	&:before {
-		content: "";
-		width: 60%;
-		height: 100%;
-		background: $light-blue;
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: -10;
-	}
-	&:after {
 		content: "";
 		width: 0;
 	    height: 0;
-	    border-bottom: 10px solid red;
-	    border-left: 100px solid transparent;
-	    border-right: 100px solid transparent;
-
+	    border-bottom: 85px solid $light-blue;
+	    border-left: 85px solid transparent;
+	    border-right: 85px solid transparent;
+	    position: absolute;
+	    left: -85px;
 	}
 }
 
@@ -138,4 +145,20 @@
 	font-size: 16px;
 	text-decoration: none;
 	margin: 0 25px;
+}
+
+.header .container-bottom .box .navigation .active {
+	background: red;
+}
+
+// ----- Animation Styles -----
+
+@keyframes side-bounce {
+	from {
+		margin-right: 10px;
+	}
+
+	to {
+		margin-right: 3px;
+	}
 }

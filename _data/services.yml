@@ -1,0 +1,36 @@
+- name: Package Development & Engineering
+  description: From new design conceptualization, to prototype development, to trials and commercial production, we've got you covered every step of the way.
+  image: /assets/images/package-development-engineering.jpg
+  id: 0
+- name: Package Design, Artwork, and Prototype Development
+  description: Our team has the creative and technical know-how to design and create top of the line packaging.
+  image: /assets/images/package-design-artwork.jpg
+  id: 1
+- name: Mold Development, Qualification, and Management
+  description: Working with molds goes beyond the already existing. We also specialize in the development and validation of new or pilot molds. 
+  image: /assets/images/model-development.jpg
+  id: 2
+- name: Assembly Line & Machine Validation
+  description: Equity Packaging has been carrying out machine development programs for clients across the globe. 
+  image: /assets/images/assembly-line.jpg
+  id: 3
+- name: Specification Management
+  description: We are a professional team with hands-on experience implementing & maintaining specification management systems globally.
+  image: /assets/images/specification-managemenet.jpg
+  id: 4
+- name: Market Research & Competitive Benchmarking
+  description: Package design is a critical variable in a successful product. Our expertise provides the guidance your product needs. 
+  image: /assets/images/market-research.jpg
+  id: 5
+- name: Resource Outsourcing
+  description: Clients receive the skilled support needed for short or long-term, onsite, and offsite projects.
+  image: /assets/images/resource-outsourcing.jpg
+  id: 6
+- name: Packaging-Line Troubleshooting
+  description: Our engineers have the necessary skills and knowledge to troubleshoot machinery.
+  image: /assets/images/package-line-troubleshooting.jpg
+  id: 7
+- name: Vendor Evaluation & Vendor Development
+  description: Our team of professionals evaluates vendors based on your requirements.
+  image: /assets/images/vendor-evalution.jpg
+  id: 8

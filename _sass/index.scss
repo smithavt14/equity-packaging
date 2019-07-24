@@ -1,0 +1,117 @@
+// Import colors and fonts
+@import "colors";
+@import "fonts";
+
+// Desktop Styles
+.home__wrapper {
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	font-family: UEFA Supercup Regular;
+	& .carousel-item .image {
+		background: url('/assets/images/home__banner-1.jpeg');
+		background-size: cover;
+		background-position: center;
+		height: calc(100vh - 135px);
+		width: 100vw;
+		position: relative;
+		& .box {
+			position: absolute;
+			bottom: 10%;
+			left: 5%;
+			background: white;
+			padding: 20px;
+			width: 500px;
+			& .title {
+				font-size: 36px;
+				font-family: UEFA Supercup Bold; 
+				margin-bottom: 10px;
+			}
+			& .subtitle {
+				font-size: 16px;
+				margin-bottom: 20px;
+			}
+			& .flex-box {
+				display: flex;
+				padding: 0;
+				align-items: center;
+				position: relative;
+				width: 100px;
+				&:hover > .icon {
+					right: -15px;
+				}
+				& a {
+					font-family: UEFA Supercup Bold;
+					font-size: 16px;
+					color: $blue;
+					text-decoration: none;
+				}
+				& .icon {
+					width: 20px;
+					position: absolute;
+					right: -10px;
+					transition: .25s ease-in-out;
+				}
+			}
+		}
+	}
+	& .services {
+		width: 90%;
+		display: flex;
+		padding: 50px 0;
+		& .left-box {
+			width: 500px;
+			flex-shrink: 0;
+			& .title {
+				font-family: UEFA Supercup Bold;
+				font-size: 22px;
+				margin-bottom: 20px;
+			}
+		}	& .content {
+				margin-bottom: 20px;
+		}	& .flex-box {
+				display: flex;
+				position: relative;
+				align-items: center;
+				width: 130px;
+				& a {
+					font-family: UEFA Supercup Bold;
+					color: $blue;
+					text-decoration: none;
+				} 
+				& .icon {
+					position: absolute;
+					right: -10px;
+					width: 20px;
+					transition: .25s ease-in-out;
+				}
+				&:hover > .icon {
+					right: -15px;
+				}
+			}
+		& .right-box {
+			flex-grow: 1;
+			padding: 50px 0;
+			& .service-container {
+				width: 300px;
+				height: 390px;
+				padding: 20px;
+				background: $beige;
+				box-sizing: border-box;
+				& img {
+					width: 100%;
+					margin: 0 auto;
+				}
+				& .name {
+					font-family: UEFA Supercup Bold;
+					font-size: 16px;
+					margin: 10px 0;
+				}
+				& .description {
+					font-size: 14px;
+					margin: 10px 0;
+				}
+			}
+		}
+	}
+}

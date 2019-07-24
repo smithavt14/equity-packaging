@@ -23,12 +23,11 @@
 		</div>
 		<div class="box">
 			<div class="navigation">
-				<a href="/services">Services</a>
-				<a href="/work">Our Work</a>
-				<a href="/careers">Careers</a>
-				<a href="/outofthebox">Out of the Box</a>
-				<a href="/about">About</a>
+				{% for item in site.data.header %}
+				<a href="{{ item.link }}" {% if page.url == item.link %} class="active" {% endif %}> {{ item.name }}</a>
+				{% endfor %}
 			</div>
+			<div class="highlight"></div>
 		</div>
 	</div>
 </div>

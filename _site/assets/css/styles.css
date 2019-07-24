@@ -27,7 +27,8 @@
 
 .header .container-top .box {
   display: flex;
-  color: #5D6063; }
+  color: #5D6063;
+  position: relative; }
 
 .header .container-top .box a {
   color: inherit;
@@ -36,6 +37,8 @@
 .header .container-top .box .contact-container {
   display: flex;
   align-items: center; }
+  .header .container-top .box .contact-container:hover > .icon {
+    left: -10px; }
 
 .header .container-top .box .divider {
   margin: 0 10px;
@@ -46,7 +49,7 @@
   align-items: center; }
 
 .header .container-top .box .language-container .icon {
-  background: url("/assets/icons/gray-arrow.png");
+  background: url("/assets/icons/arrow-gray.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -55,14 +58,16 @@
   margin: 0 10px; }
 
 .header .container-top .box .contact-container .icon {
-  background: url("/assets/icons/gray-arrow.png");
+  background: url("/assets/icons/arrow-gray.png");
   transform: rotate(-90deg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   height: 8px;
   width: 6px;
-  margin-right: 10px; }
+  position: absolute;
+  left: -15px;
+  transition: .25s ease-in-out; }
 
 .header .container-top .box .social-icon {
   margin: 0 10px;
@@ -90,22 +95,24 @@
   padding: 0 100px;
   box-sizing: border-box;
   position: relative; }
-  .header .container-bottom:before {
-    content: "";
-    width: 60%;
-    height: 100%;
-    background: #DDF1FF;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -10; }
-  .header .container-bottom:after {
+
+.header .container-bottom .box .highlight {
+  width: 55%;
+  height: 100%;
+  background: #DDF1FF;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -10; }
+  .header .container-bottom .box .highlight:before {
     content: "";
     width: 0;
     height: 0;
-    border-bottom: 10px solid red;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent; }
+    border-bottom: 85px solid #DDF1FF;
+    border-left: 85px solid transparent;
+    border-right: 85px solid transparent;
+    position: absolute;
+    left: -85px; }
 
 .header .container-bottom .box {
   display: flex;
@@ -129,6 +136,122 @@
   font-size: 16px;
   text-decoration: none;
   margin: 0 25px; }
+
+.header .container-bottom .box .navigation .active {
+  background: red; }
+
+@keyframes side-bounce {
+  from {
+    margin-right: 10px; }
+  to {
+    margin-right: 3px; } }
+@font-face {
+  font-family: 'UEFA Supercup Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("UEFA Supercup Regular"), url("/assets/fonts/UEFASupercup-Regular.woff") format("woff"); }
+@font-face {
+  font-family: 'UEFA Supercup Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local("UEFA Supercup Light"), url("/assets/fonts/UEFASupercup-Light.woff") format("woff"); }
+@font-face {
+  font-family: 'UEFA Supercup Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("UEFA Supercup Bold"), url("/assets/fonts/UEFASupercup-Bold.woff") format("woff"); }
+.home__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: UEFA Supercup Regular; }
+  .home__wrapper .carousel-item .image {
+    background: url("/assets/images/home__banner-1.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 135px);
+    width: 100vw;
+    position: relative; }
+    .home__wrapper .carousel-item .image .box {
+      position: absolute;
+      bottom: 10%;
+      left: 5%;
+      background: white;
+      padding: 20px;
+      width: 500px; }
+      .home__wrapper .carousel-item .image .box .title {
+        font-size: 36px;
+        font-family: UEFA Supercup Bold;
+        margin-bottom: 10px; }
+      .home__wrapper .carousel-item .image .box .subtitle {
+        font-size: 16px;
+        margin-bottom: 20px; }
+      .home__wrapper .carousel-item .image .box .flex-box {
+        display: flex;
+        padding: 0;
+        align-items: center;
+        position: relative;
+        width: 100px; }
+        .home__wrapper .carousel-item .image .box .flex-box:hover > .icon {
+          right: -15px; }
+        .home__wrapper .carousel-item .image .box .flex-box a {
+          font-family: UEFA Supercup Bold;
+          font-size: 16px;
+          color: #2789CA;
+          text-decoration: none; }
+        .home__wrapper .carousel-item .image .box .flex-box .icon {
+          width: 20px;
+          position: absolute;
+          right: -10px;
+          transition: .25s ease-in-out; }
+  .home__wrapper .services {
+    width: 90%;
+    display: flex;
+    padding: 50px 0; }
+    .home__wrapper .services .left-box {
+      width: 500px;
+      flex-shrink: 0; }
+      .home__wrapper .services .left-box .title {
+        font-family: UEFA Supercup Bold;
+        font-size: 22px;
+        margin-bottom: 20px; }
+    .home__wrapper .services .content {
+      margin-bottom: 20px; }
+    .home__wrapper .services .flex-box {
+      display: flex;
+      position: relative;
+      align-items: center;
+      width: 130px; }
+      .home__wrapper .services .flex-box a {
+        font-family: UEFA Supercup Bold;
+        color: #2789CA;
+        text-decoration: none; }
+      .home__wrapper .services .flex-box .icon {
+        position: absolute;
+        right: -10px;
+        width: 20px;
+        transition: .25s ease-in-out; }
+      .home__wrapper .services .flex-box:hover > .icon {
+        right: -15px; }
+    .home__wrapper .services .right-box {
+      flex-grow: 1;
+      padding: 50px 0; }
+      .home__wrapper .services .right-box .service-container {
+        width: 300px;
+        height: 390px;
+        padding: 20px;
+        background: #FAF3E6;
+        box-sizing: border-box; }
+        .home__wrapper .services .right-box .service-container img {
+          width: 100%;
+          margin: 0 auto; }
+        .home__wrapper .services .right-box .service-container .name {
+          font-family: UEFA Supercup Bold;
+          font-size: 16px;
+          margin: 10px 0; }
+        .home__wrapper .services .right-box .service-container .description {
+          font-size: 14px;
+          margin: 10px 0; }
 
 body {
   margin: 0; }
@@ -162,7 +285,8 @@ body {
 
 .header .container-top .box {
   display: flex;
-  color: #5D6063; }
+  color: #5D6063;
+  position: relative; }
 
 .header .container-top .box a {
   color: inherit;
@@ -171,6 +295,8 @@ body {
 .header .container-top .box .contact-container {
   display: flex;
   align-items: center; }
+  .header .container-top .box .contact-container:hover > .icon {
+    left: -10px; }
 
 .header .container-top .box .divider {
   margin: 0 10px;
@@ -181,7 +307,7 @@ body {
   align-items: center; }
 
 .header .container-top .box .language-container .icon {
-  background: url("/assets/icons/gray-arrow.png");
+  background: url("/assets/icons/arrow-gray.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -190,14 +316,16 @@ body {
   margin: 0 10px; }
 
 .header .container-top .box .contact-container .icon {
-  background: url("/assets/icons/gray-arrow.png");
+  background: url("/assets/icons/arrow-gray.png");
   transform: rotate(-90deg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   height: 8px;
   width: 6px;
-  margin-right: 10px; }
+  position: absolute;
+  left: -15px;
+  transition: .25s ease-in-out; }
 
 .header .container-top .box .social-icon {
   margin: 0 10px;
@@ -225,22 +353,24 @@ body {
   padding: 0 100px;
   box-sizing: border-box;
   position: relative; }
-  .header .container-bottom:before {
-    content: "";
-    width: 60%;
-    height: 100%;
-    background: #DDF1FF;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -10; }
-  .header .container-bottom:after {
+
+.header .container-bottom .box .highlight {
+  width: 55%;
+  height: 100%;
+  background: #DDF1FF;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -10; }
+  .header .container-bottom .box .highlight:before {
     content: "";
     width: 0;
     height: 0;
-    border-bottom: 10px solid red;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent; }
+    border-bottom: 85px solid #DDF1FF;
+    border-left: 85px solid transparent;
+    border-right: 85px solid transparent;
+    position: absolute;
+    left: -85px; }
 
 .header .container-bottom .box {
   display: flex;
@@ -264,3 +394,12 @@ body {
   font-size: 16px;
   text-decoration: none;
   margin: 0 25px; }
+
+.header .container-bottom .box .navigation .active {
+  background: red; }
+
+@keyframes side-bounce {
+  from {
+    margin-right: 10px; }
+  to {
+    margin-right: 3px; } }
